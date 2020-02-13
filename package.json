@@ -1,0 +1,25 @@
+{
+    "name": "alphacode-language-support",
+    "displayName": "alphacode language support",
+    "description": "language support and syntax highlighting for the alphacode language",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.42.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "alphacode",
+            "aliases": ["alphacode", "alphacode"],
+            "extensions": [".ac"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "alphacode",
+            "scopeName": "source.ac",
+            "path": "./syntaxes/alphacode.tmLanguage.json"
+        }]
+    }
+}

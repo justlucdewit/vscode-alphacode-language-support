@@ -1,0 +1,39 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "alphacode",
+	"patterns": [
+		{"include": "#keywords"},
+		{"include": "#comment"},
+		{"include": "#number"},
+		{"include": "#string"}
+	],
+	"repository": {
+		"comment": {
+			"patterns": [{
+				"name": "comment.line.number-sign",
+				"match": "#.+"
+			}]
+		},
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.alphacode",
+				"match": "\\b(goto|print|exit)\\b"
+			}]
+		},
+		"number": {
+			"patterns": [{
+				"name": "constant.numeric.alphacode",
+				"match": "\\d+"
+			}]
+		},
+		"string": {
+			"patterns": [{
+				"name": "string.unquoted.alphacode",
+				"match": "(?<=print ).+"
+			}]
+		}
+		
+
+	},
+	"scopeName": "source.ac"
+}

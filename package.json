@@ -1,8 +1,9 @@
 {
     "name": "alphacode-language-support",
+    "publisher": "lucdewit",
     "displayName": "alphacode language support",
     "description": "language support and syntax highlighting for the alphacode language",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "engines": {
         "vscode": "^1.42.0"
     },

@@ -5,7 +5,8 @@
 		{"include": "#keywords"},
 		{"include": "#comment"},
 		{"include": "#number"},
-		{"include": "#string"}
+		{"include": "#string"},
+		{"include": "#marker"}
 	],
 	"repository": {
 		"comment": {
@@ -14,22 +15,29 @@
 				"match": "#.+"
 			}]
 		},
+		"marker":{
+			"patterns": [{
+				"name": "variable.other.alphacode",
+				"match": ":\\w+"
+
+			}]
+		},
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.alphacode",
-				"match": "\\b(goto|print|exit)\\b"
+				"match": "\\b(goto|print|exit|let|add|sub|div|gotoifis|gotoifisgtr|gotoifislss|mul|more|less|wait|cpy|del|cat|fread|fwrite|fapp|rand|tonum)\\b"
 			}]
 		},
 		"number": {
 			"patterns": [{
 				"name": "constant.numeric.alphacode",
-				"match": "\\d+"
+				"match": " \\d+ "
 			}]
 		},
 		"string": {
 			"patterns": [{
 				"name": "string.unquoted.alphacode",
-				"match": "(?<=print ).+"
+				"match": "\".+\""
 			}]
 		}
 		
